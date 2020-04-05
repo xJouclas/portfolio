@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PORTFOLIO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- jQuery -->
+		<script type="text/javascript" src="<?= $context ?>js/library/jquery-3.2.1.min.js"></script>
+		<!-- Font Awesome -->
+		<script defer type="text/javascript" src="<?= $context ?>js/library/fontawesome-all.min.js"></script>
+		<!-- FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin+Sketch|Codystar|Limelight|Pacifico|Plaster|Poiret+One|Rozha+One|Sacramento|Special+Elite" rel="stylesheet"> 
+		<!-- CSS Vendor -->
+		<link rel="stylesheet" type="text/css" href="<?= $context ?>templates/css/normalize.css" media="all" />
+		<!-- CSS Perso -->
+		<link rel="stylesheet" type="text/css" href="<?= $context ?>templates/css/base.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="<?= $context ?>templates/css/style.css" media="screen" />
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="<?= $context ?>js/script.js"></script>
+		<script type="text/javascript" src="<?= $context ?>js/classes/cvToggle.class.js"></script>
+	</head>
+	<body>
+		<!--************************************-->
+		<!--HEADER-->
+		<?php if($http->basename != "index" && $http->basename != "admin"): ?>
+			<header>
+				<nav id="nav-bar">
+					<a href="<?= $www ?>">
+						<i class="fas fa-home fa-lg"></i>
+					</a>
+					<i class="fas fa-circle fa-xs"></i>
+					<?php if($http->basename == "cv"): ?>
+						<a href="<?= $www ?>/cv" class="a-selected">CV</a>
+					<?php else: ?>
+						<a href="<?= $www ?>/cv" class="underline">CV</a>
+					<?php endif ?>
+					<i class="fas fa-circle fa-xs"></i>
+					<?php if($http->basename == "book"): ?>
+						<a href="<?= $www ?>/book" class="a-selected">Book</a>
+					<?php else: ?>
+						<a href="<?= $www ?>/book" class="underline">Book</a>
+					<?php endif ?>
+					<i class="fas fa-circle fa-xs"></i>
+					<?php if($http->basename == "inspiration"): ?>
+						<a href="<?= $www ?>/inspiration" class="a-selected">Inspirations</a>
+					<?php else: ?>
+						<a href="<?= $www ?>/inspiration" class="underline">Inspirations</a>
+					<?php endif ?>
+					<i class="fas fa-circle fa-xs"></i>
+					<?php if($http->basename == "contact"): ?>
+						<a href="<?= $www ?>/contact" class="a-selected">Contact</a>
+					<?php else: ?>
+						<a href="<?= $www ?>/contact" class="underline">Contact</a>
+					<?php endif ?>
+				</nav>
+			</header>
+		<?php endif ?>

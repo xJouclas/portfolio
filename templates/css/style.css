@@ -1,0 +1,326 @@
+/* FONT FACE */
+
+
+/*------------------------------------------------------------------*/
+/*GLOBAL */
+body {
+	background-color: #ffe6e6;
+	font-family: 'Poiret One';
+}
+
+.container {
+	width:  90%;
+}
+/*------------------------------------------------------------------*/
+/* HEADER */
+header {
+	text-align: center;
+	padding:  2rem;
+}
+
+header nav a svg {
+	color: #696969;
+	margin-bottom: 1px;
+}
+.a-selected {
+	color: #b3cccc;
+	text-shadow: 1px 1px 2px #FFF;
+	border-bottom: 2px solid #b3cccc;
+}
+/*------------------------------------------------------------------*/
+/* MAIN */
+
+
+/*------------------------------------------------------------------*/
+/* FOOTER */
+footer {
+	text-align: center;
+	padding: 5rem;
+}
+footer ul {
+	margin:  0;
+	padding: 0;
+}
+footer form {
+	width: 25%;
+}
+fieldset {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+footer button {
+	width: 10%;
+}
+footer div {
+	width: 50%;
+	margin: 0.5rem;
+}
+/*-------------------INDEX-----------------------------------------------*/
+#index {
+	padding: 8%;
+}
+#index section {
+	background-color: rgb(255, 250, 250);
+	max-width: 1035px;
+	padding-top: 1%;
+	padding-bottom: 1.7%;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border:  10px double #696969;
+	border-radius: 20px;
+}
+
+#index h1, #index p, #index img, #cv>section>article+article>h2 {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+#index h1 {
+	font-family: 'Codystar';
+	font-size: 4rem;
+	color: #696969;
+	text-shadow: 1px 1px 2px #000;
+	margin:  3px 0;
+}
+
+#index p {
+	font-size:  2rem;
+	color: #696969;
+	text-shadow: 1px 1px 2px #000;
+	margin:  7px 0;
+}
+
+#index p+p {
+	font-size: 1.5rem;
+	margin:  -2px 0;
+}
+
+#index #mainphoto {
+	width: 17%;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 3%;
+	margin-top: 27px;
+}
+
+#index div {
+	max-width: 1035px;
+	margin-top: 1rem;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+header a, #index div a {
+	text-transform: uppercase;
+	color: #696969;
+	text-shadow: 1px 1px 2px #000;
+	font-size: 2rem;
+	margin: 0 2rem;
+}
+
+header a:hover, #index div a:hover, #cv article+article h2.underline:hover {
+	color: #b3cccc;
+	text-shadow: 1px 1px 2px #FFF;
+}
+header svg, #index svg {
+	color:  rgb(255, 250, 250);
+	margin-bottom: 4px;
+}
+
+/*---------------------Hover Underline Animation----------------*/
+.underline {
+  display: inline-block;
+  position: relative;
+}
+.underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #b3cccc;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*------------------------------CV---------------------------------------*/
+#cv>section {
+	margin-top: 3%;
+	display: flex;
+	justify-content: space-between;
+}
+#cv section article:first-child {
+	width: 20%;
+	border: 1px solid #696969;
+	border-radius: 5px;
+	background-color: rgb(255, 250, 250);
+	text-align: center;
+	padding: 1rem;
+}
+#cv section article+article {
+	width: 78%;
+	border: 1px solid #696969;
+	border-radius: 5px;
+	background-color: rgb(255, 250, 250);
+	text-align: center;
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: center;
+}
+#cv section article:first-child h2:first-child, #cv section article+article h2 {
+	margin-top: 0;
+}
+#cv section article:first-child ul li, #cv section article p {
+	font-size: 1.8rem;
+	margin: 0 7rem;
+	color: #696969;
+}
+#cv section article:first-child ul small {
+	font-size: 1.2rem;
+}
+#cv section article ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#cv section article h2 {
+	font-size: 3rem;
+}
+#cv section article+article h2 {
+	height: 10%;
+	margin-left: 6rem;
+	margin-right: 6rem;
+}
+
+#cv .cv-content-form, #cv .cv-content-exp {
+	flex-basis: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#cv .cv-content-exp {
+	align-items: baseline;
+}
+#cv .cv-content-form p, #cv .cv-content-exp p {
+	margin: 0.5rem 0;
+}
+#cv .cv-content-form .formation {
+	flex-basis: 80%;
+	text-align: left;
+}
+#cv .cv-content-form .formation-date {
+	flex-basis: 20%;
+}
+#cv section article+article .formation-date {
+	font-family: 'Limelight';
+	font-size: 2rem;
+}
+#cv .formation span {
+	font-weight: bold;
+}
+#cv .hide {
+	display: none;
+}
+#cv .cv-content-exp .formation-date {
+	flex-basis: 15%;
+}
+#cv .cv-content-exp section {
+	flex-basis: 84%;
+	display: flex;
+	flex-direction: column;
+	border-left: 1px solid #696969;
+	padding: 2rem;
+	position: relative;
+	text-align: left;
+}
+#cv .cv-content-exp section svg {
+	position: absolute;
+	top: 33px;
+	left: -4.3px;
+	color: #696969;
+}
+#cv .cv-content-exp .formation-title {
+	text-decoration: underline;
+	font-size: 2rem;
+	margin: 0;
+}
+#cv .cv-content-exp .formation {
+	margin-bottom: 0; 
+}
+#cv .h2-selected {
+	color: #b3cccc;
+	text-shadow: 1px 1px 2px #FFF;
+	border-bottom: 2px solid #b3cccc;
+}
+#cv li {
+	overflow: hidden;
+}
+#cv li:after, #cv li:before {
+	background-color: #696969;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+#cv li:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+#cv li:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------INSPIRATIONS-------------------------*/
+#inspirations section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+}
+#inspirations section:first-child {
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #696969;
+}
+#inspirations section h2 {
+	flex-basis: 100%;
+	color: #696969;
+	font-family: 'Limelight';
+	font-size: 3rem;
+}
+#inspirations section article {
+	text-align: center;
+}
+#inspirations section article h3 {
+	color: #696969;
+	font-family: 'Limelight';
+	font-size: 2rem;
+} 
